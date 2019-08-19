@@ -13,6 +13,7 @@
 **/tmp/
 **/temp/
 
-**/vendor/**
+**/vendor/
+
 **/data/**
 env.bat
