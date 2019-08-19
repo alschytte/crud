@@ -80,8 +80,8 @@ else
 	$country = $form_data->country;
 	$phone = $form_data->phone;
 	$web = $form_data->web;
-	$lat = $form_data->lat;
-	$lng = $form_data->lng;
+	$lat = (string) $form_data->lat;
+	$lng = (string) $form_data->lng;
 
 	if(empty($error))
 	{
