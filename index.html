@@ -129,13 +129,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
+						<div class="col-xs-8">
 							<div class="form-group">
 								<label>Enter city</label>
 								<input type="text" name="city" ng-model="city" class="form-control" />
 							</div>
 						</div>
-						<div class="col-xs-6">
+						<div class="col-xs-4">
 							<div class="form-group">
 								<label>Enter state</label>
 								<input type="text" name="state" ng-model="state" class="form-control" />
@@ -143,16 +143,24 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
+						<div class="col-xs-8">
 							<div class="form-group">
 								<label>Enter country</label>
 								<input type="text" name="country" ng-model="country" class="form-control" />
 							</div>
 						</div>
-						<div class="col-xs-6">
+						<div class="col-xs-4">
 							<div class="form-group">
 								<label>Enter countrycode</label>
 								<input type="text" name="countrycode" ng-model="countrycode" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label>Enter www adress</label>
+								<input type="text" name="web" ng-model="web" class="form-control" />
 							</div>
 						</div>
 					</div>
@@ -219,6 +227,19 @@
 				data: {
 					'first': $scope.first,
 					'last': $scope.last,
+					'name': $scope.name,
+					'title_zone': $scope.title_zone,
+					'title_lifting': $scope.title_lifting,
+					'address': $scope.address,
+					'city': $scope.city,
+					'state': $scope.state,
+					'country': $scope.country,
+					'countrycode': $scope.countrycode,
+					'web': $scope.web,
+					'phone': $scope.phone,
+					'web': $scope.web ,
+					'lat': $scope.lat,
+					'lng': $scope.lng ,
 					'action': $scope.submit_button,
 					'id': $scope.hidden_id
 				}
