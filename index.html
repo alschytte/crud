@@ -258,8 +258,8 @@
 				$scope.address = data.address;
 				$scope.city = data.city;
 				$scope.state = data.state;
-				$scope.lat = floatval(data.lat) ;
-				$scope.lng = floatval(data.lng) ;
+				$scope.lat = data.lat* 1.0 ;
+				$scope.lng = data.lng* 1.0 ;
 				$scope.web = data.web;
 				$scope.countrycode = data.countrycode;
 				$scope.hidden_id = id;
