@@ -35,6 +35,7 @@
 						<th>Last Name</th>
 						<th>Country</th>
 						<th>email</th>
+						<th>Edit</th>
 						<th>Delete</th>
 					</tr>
 				</thead>
@@ -44,6 +45,7 @@
 						<td>{{name.last}}</td>
 						<td>{{name.country}}</td>
 						<td>{{name.email}}</td>
+						<td><button type="button" ng-click="fetchSingleData(name.id)" class="btn btn-warning btn-xs">Edit</button></td>
 						<td><button type="button" ng-click="deleteData(name.id)" class="btn btn-danger btn-xs">Delete</button></td>
 					</tr>
 				</tbody>
