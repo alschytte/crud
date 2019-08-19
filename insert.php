@@ -27,6 +27,9 @@ if($form_data->action == 'fetch_single_data')
 		$output['name'] = $row['name'];
 		$output['title_zone'] = $row['title_zone'];
 		$output['title_lifting'] = $row['title_lifting'];
+		$output['address'] = $row['address'];
+		$output['city'] = $row['city'];
+		$output['state'] = $row['state'];
 		$output['country'] = $row['country'];
 		$output['email'] = $row['email'];
 		$output['phone'] = $row['phone'];
@@ -71,6 +74,9 @@ else
 	$name = $form_data->name;
 	$title_zone = $form_data->title_zone;
 	$title_lifting = $form_data->title_lifting;
+	$address = $form_data->address;
+	$city = $form_data->city;
+	$state = $form_data->state;
 	$country = $form_data->country;
 	$phone = $form_data->phone;
 	$web = $form_data->web;
@@ -87,6 +93,9 @@ else
 				':name'	=>	$first,
 				':title_zone'	=>	$title_zone,
 				':title_lifting'	=>	$title_lifting,
+				':address'	=>	$address,
+				':city'	=>	$city,
+				':state'	=>	$state,
 				':country'	=>	$country,
 				':email'	=>	$email,
 				':phone'	=>	$phone,
@@ -97,9 +106,9 @@ else
 			);
 			$query = "
 			INSERT INTO `therapists`
-				(first, last, name,title_zone,title_lifting,country,email,
+				(first, last, name,title_zone,title_lifting,country,email,address, city, state,
 				phone,web,lat,lng, countrycode) VALUES
-				(:first, :last, :name,:title_zone,:title_lifting,:country,:email,
+				(:first, :last, :name,:title_zone,:title_lifting,:country,:email,:address, :city, :state,
 				:phone,:web,:lat,:lng, :countrycode)
 			";
 			$statement = $connect->prepare($query);
@@ -116,6 +125,9 @@ else
 				':name'	=>	$first,
 				':title_zone'	=>	$title_zone,
 				':title_lifting'	=>	$title_lifting,
+				':address'	=>	$address,
+				':city'	=>	$city,
+				':state'	=>	$state,
 				':country'	=>	$country,
 				':email'	=>	$email,
 				':phone'	=>	$phone,
@@ -132,6 +144,9 @@ else
 			title_zone = :title_zone,
 			title_lifting = :title_lifting,
 			name = :name,
+			address = :address,
+			city = :city,
+			state = :state,
 			country = :country,
 			email = :email,
 			phone = :phone,

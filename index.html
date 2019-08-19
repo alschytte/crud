@@ -35,17 +35,15 @@
 						<th>Last Name</th>
 						<th>Country</th>
 						<th>email</th>
-						<th>Edit</th>
 						<th>Delete</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="name in namesData">
+					<tr ng-repeat="name in namesData" ng-click="fetchSingleData(name.id)" >
 						<td>{{name.first}}</td>
 						<td>{{name.last}}</td>
 						<td>{{name.country}}</td>
 						<td>{{name.email}}</td>
-						<td><button type="button" ng-click="fetchSingleData(name.id)" class="btn btn-warning btn-xs">Edit</button></td>
 						<td><button type="button" ng-click="deleteData(name.id)" class="btn btn-danger btn-xs">Delete</button></td>
 					</tr>
 				</tbody>
@@ -117,6 +115,42 @@
 							<div class="form-group">
 								<label>Enter Phone</label>
 								<input type="text" name="phone" ng-model="phone" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label>Enter address</label>
+								<input type="text" name="address" ng-model="address" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label>Enter city</label>
+								<input type="text" name="city" ng-model="city" class="form-control" />
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label>Enter state</label>
+								<input type="text" name="state" ng-model="state" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label>Enter country</label>
+								<input type="text" name="country" ng-model="country" class="form-control" />
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label>Enter countrycode</label>
+								<input type="text" name="countrycode" ng-model="countrycode" class="form-control" />
 							</div>
 						</div>
 					</div>
@@ -217,9 +251,13 @@
 				$scope.email = data.email;
 				$scope.phone = data.phone;
 				$scope.title_zone = data.title_zone;
+				$scope.country = data.country;
 				$scope.title_lifting = data.title_lifting;
-				$scope.lat = data.lat;
-				$scope.lng = data.lng;
+				$scope.address = data.address;
+				$scope.city = data.city;
+				$scope.state = data.state;
+				$scope.lat = floatval(data.lat) ;
+				$scope.lng = floatval(data.lng) ;
 				$scope.web = data.web;
 				$scope.countrycode = data.countrycode;
 				$scope.hidden_id = id;
