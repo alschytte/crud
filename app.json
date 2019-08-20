@@ -1,0 +1,33 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ],
+  "env": {
+    "DBHOST": {
+      "required": true
+    },
+    "DBNAME": {
+      "required": true
+    },
+    "DBPASS": {
+      "required": true
+    },
+    "DBUSER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "crud",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
